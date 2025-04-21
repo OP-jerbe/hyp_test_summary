@@ -1,3 +1,12 @@
+"""
+Instructions:
+
+Copy this template to the working_dir folder.
+Save the file as SN-XXXXLRFC_test_summary.py (replace XXXX with the serial number)
+Run the script from the termainal as a module like this (omit the .py file extension):
+    python -m working_dir.SN-XXXXLRFC_test_summary
+"""
+
 import sys
 from datetime import datetime
 from tkinter.filedialog import askopenfilenames
@@ -9,14 +18,16 @@ from pandas import DatetimeIndex
 from dir_path import DIR_PATH
 
 # Define the starting directory for finding csv files
+# Change this in the dir_path.py file
 INITIAL_DIR: str = DIR_PATH
 
 # Define the source serial number and RMA number (if applicable)
 SOURCE_SN: str = 'XXXLRFC'
 RMA_NUMBER: str | None = None
 
-# Define time stamps for each pass/rework of source. Edit these time stamps for each individual source.
-TEST_CYCLES: list[str] = []  # must be of the format: 'YYYY-MM-DD hh:mm:ss'
+# Define time stamps for each pass/rework of source.
+# Must be of the format: 'YYYY-MM-DD hh:mm:ss'
+TEST_CYCLES: list[str] = []
 
 assert len(TEST_CYCLES) % 2 == 0
 
