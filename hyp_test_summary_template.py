@@ -5,6 +5,7 @@ from tkinter.filedialog import askopenfilenames
 import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import DatetimeIndex
+
 from dir_path import DIR_PATH
 
 # Define the starting directory for finding csv files
@@ -79,7 +80,7 @@ def plot_test_data(
 
     # Plot the first four columns normally
     for i, (column, color) in enumerate(
-        zip(columns_to_plot[:-2], colors[:-2])
+        zip(columns_to_plot[:-2], colors[:-2], strict=True)
     ):  # Skip the last two columns
         df[column].plot(ax=axes[i], color=color)
         axes[i].set_ylabel(column, fontsize=8)
