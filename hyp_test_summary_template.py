@@ -16,14 +16,8 @@ SOURCE_SN: str = 'XXXLRFC'
 RMA_NUMBER: str | None = None
 
 # Define time stamps for each pass/rework of source. Edit these time stamps for each individual source.
-TEST_CYCLES: list[str] = [
-    '2024-07-08 08:05:00',  # begin pretest (light source)
-    '2024-07-11 11:37:00',  # begin pass 01 new SA
-    '2024-07-17 14:43:00',  # begin pass 02 removed trap from extractor
-    '2024-08-02 10:16:00',  # begin pass 03 new leak valve and SA
-    '2024-08-19 11:36:00',  # begin pass 04 new leak valve
-    '2024-09-10 13:16:00',  # end testing cycle
-]
+TEST_CYCLES: list[str] = []  # must be of the format: 'YYYY-MM-DD hh:mm:ss'
+
 
 # Define the y-axis scales for certain columns to plot
 ANG_INT_HIGH: int | float = 7
