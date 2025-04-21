@@ -18,6 +18,7 @@ RMA_NUMBER: str | None = None
 # Define time stamps for each pass/rework of source. Edit these time stamps for each individual source.
 TEST_CYCLES: list[str] = []  # must be of the format: 'YYYY-MM-DD hh:mm:ss'
 
+assert len(TEST_CYCLES) % 2 == 0
 
 # Define the y-axis scales for certain columns to plot
 ANG_INT_HIGH: int | float = 7
