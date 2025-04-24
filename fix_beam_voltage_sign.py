@@ -1,5 +1,12 @@
-import pandas as pd
+"""
+This script is used to fix the csv files from test stand 1 and 2, both of
+which output the wrong sign on the Beam Voltage data.
+"""
+
 import os
+
+import pandas as pd
+
 from dir_path import DIR_PATH
 
 # Set the directory where your CSV files are located
