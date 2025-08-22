@@ -25,11 +25,23 @@ for filename in os.listdir(directory):
         if 'Beam Voltage (kV)' in df.columns:
             # Flip the sign of column 'D'
             df['Beam Voltage (kV)'] = -df['Beam Voltage (kV)']
-
-            # Save the modified DataFrame back to CSV
-            df.to_csv(file_path, index=False)
-            print(f'Processed {filename}')
         else:
             print(f"Column 'Beam Voltage (kV)' not found in {filename}")
+
+        if 'Lens #1 Voltage (kV)' in df.columns:
+            # Change the unit from kV to V
+            df = df.rename(columns={'Lens #1 Voltage (kV)': 'Lens #1 Voltage (V)'})
+        else:
+            print(f"Column 'Lens #1 Voltage (kV)' not found in {filename}")
+
+        if 'Extractor Voltage (kV)' in df.columns:
+            # Flip the sign of column 'F'
+            df['Extractor Voltage (kV)'] = -df['Extractor Voltage (kV)']
+        else:
+            print(f"Column 'Extractor Voltage (kV)' not found in {filename}")
+
+        # Save the modified DataFrame back to CSV
+        df.to_csv(file_path, index=False)
+        print(f'Processed {filename}')
 
 print('All files processed.')
