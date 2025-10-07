@@ -1,12 +1,3 @@
-"""
-Instructions:
-
-Copy this template to the working_dir folder.
-Save the file as SN-XXXXLRFC_test_summary.py (replace XXXX with the serial number)
-Run the script from the termainal as a module like this (omit the .py file extension):
-    python -m working_dir.SN-XXXXLRFC_test_summary
-"""
-
 import sys
 from datetime import datetime
 from tkinter.filedialog import askopenfilenames
