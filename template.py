@@ -15,14 +15,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import DatetimeIndex
 
-try:
-    from dir_path import DIR_PATH
-except Exception:
-    DIR_PATH = None
-
 # Define the starting directory for finding csv files
-# Change this in the dir_path.py file
-INITIAL_DIR: str | None = DIR_PATH
+INITIAL_DIR: str = r'\\opdata2\Company\PRODUCTION FOLDER\Production History'
 
 # Define the source serial number and RMA number (if applicable)
 SOURCE_SN: str = 'XXXLRFC'

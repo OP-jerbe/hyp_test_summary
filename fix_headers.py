@@ -7,10 +7,8 @@ import os
 
 import pandas as pd
 
-from dir_path import DIR_PATH
-
 # Set the directory where your CSV files are located
-directory = DIR_PATH
+directory: str = ''
 
 # Loop through all CSV files in the directory
 for filename in os.listdir(directory):
