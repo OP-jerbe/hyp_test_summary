@@ -1,6 +1,7 @@
 """
 This script is used to fix the csv files from test stand 1 and 2, both of
-which output the wrong sign on the Beam Voltage data.
+which output the wrong sign on the Beam Voltage and Exctractor voltage data.
+Also fixes the Lens #1 Voltage header to display the correct unit.
 """
 
 import os
