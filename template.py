@@ -6,6 +6,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pandas import DatetimeIndex
 
+
+class OddLengthError(Exception):
+    """Exception raised when a list length is expected to be even."""
+
+    pass
+
+
 # Define the starting directory for finding csv files
 INITIAL_DIR: str = r'\\opdata2\Company\PRODUCTION FOLDER\Production History'
 
@@ -17,7 +24,11 @@ RMA_NUMBER: str | None = None
 # Must be of the format: 'YYYY-MM-DD hh:mm:00'
 TEST_CYCLES: list[str] = []
 
-assert len(TEST_CYCLES) % 2 == 0
+if len(TEST_CYCLES) % 2 != 0:
+    raise OddLengthError(
+        'The length of the TEST_CYCLES list is not even.'
+        'Check to make sure that each start timestamp has an ending timestamp'
+    )
 
 # Define the y-axis scales for certain columns to plot
 ANG_INT_HIGH: int | float = 7
