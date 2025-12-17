@@ -14,7 +14,7 @@ SOURCE_SN: str = 'XXXLRFC'
 RMA_NUMBER: str | None = None
 
 # Define time stamps for each pass/rework of source.
-# Must be of the format: 'YYYY-MM-DD hh:mm:ss'
+# Must be of the format: 'YYYY-MM-DD hh:mm:00'
 TEST_CYCLES: list[str] = []
 
 assert len(TEST_CYCLES) % 2 == 0
