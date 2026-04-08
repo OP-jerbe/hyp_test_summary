@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Dark+",
     "git.enableSmartCommit": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     "python.analysis.supportDocstringTemplate": true,
